@@ -4,6 +4,9 @@
 
 We're looking for volunteer game developers to help with our racing game project. Perfect for students, beginners, and anyone passionate about game development.
 
+> **[🎮 Apply Now — Online Form](https://subtiliorars-sys.github.io/jimmythehat-volunteers/apply.html)**  
+> Or open a [volunteer application issue](https://github.com/subtiliorars-sys/jimmythehat-volunteers/issues/new?template=volunteer-application.yml).
+
 ---
 
 ## Current Projects
