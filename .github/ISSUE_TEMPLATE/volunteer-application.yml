@@ -1,0 +1,128 @@
+---
+name: Volunteer Application
+description: Apply to volunteer as a game developer, artist, or designer
+title: "[VOLUNTEER] Your Name - Role Interest"
+labels: ["volunteer-application"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in volunteering with JimmyTheHat Games! Please fill out this form completely.
+        
+  - type: input
+    id: name
+    attributes:
+      label: Your Name
+      description: What should we call you?
+      placeholder: Your name or handle
+    validations:
+      required: true
+
+  - type: input
+    id: age
+    attributes:
+      label: Your Age
+      description: Must be 16+ to apply
+      placeholder: 16
+    validations:
+      required: true
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role Interest
+      description: What role are you interested in?
+      options:
+        - Junior Game Developer (TypeScript)
+        - Game Artist (2D/3D)
+        - Game Designer
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: other-role
+    attributes:
+      label: Other Role
+      description: If you selected "Other" above, specify here
+      placeholder: e.g., Sound Designer, Writer, etc.
+
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Experience Level
+      description: How would you describe your experience level?
+      options:
+        - Complete beginner
+        - Some tutorials/learning
+        - Small personal projects
+        - Some team experience
+        - Experienced
+    validations:
+      required: true
+
+  - type: textarea
+    id: portfolio
+    attributes:
+      label: Portfolio / GitHub / itch.io
+      description: Links to your work (if any)
+      placeholder: https://github.com/yourusername or https://yourusername.itch.io
+    validations:
+      required: false
+
+  - type: dropdown
+    id: availability
+    attributes:
+      label: Weekly Availability
+      description: How many hours per week can you commit?
+      options:
+        - 5 hours/week
+        - 10 hours/week
+        - 15+ hours/week
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-interested
+    attributes:
+      label: Why Interested?
+      description: Why do you want to volunteer with us? What do you hope to learn?
+      placeholder: I'm interested because...
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Email Address
+      description: For follow-up communication
+      placeholder: your@email.com
+    validations:
+      required: true
+
+  - type: input
+    id: parent-email
+    attributes:
+      label: Parent/Guardian Email (if under 18)
+      description: Required if you are under 18
+      placeholder: parent@email.com
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Anything else you'd like us to know?
+      placeholder: Any other skills, interests, or questions...
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        **Next Steps:**
+        1. We'll review your application within 48 hours
+        2. If under 18, we'll send parental consent forms
+        3. We may schedule a quick call to discuss the project
+        4. You'll receive onboarding information if approved
+        
+        Thanks for applying!

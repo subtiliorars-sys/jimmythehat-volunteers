@@ -1,0 +1,28 @@
+---
+name: Question
+description: Ask a question about volunteering
+title: "[QUESTION] Your Question"
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about volunteering with JimmyTheHat Games? Ask here!
+        
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: I'm wondering about...
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Email (optional)
+      description: If you'd like a direct response via email
+      placeholder: your@email.com
+    validations:
+      required: false

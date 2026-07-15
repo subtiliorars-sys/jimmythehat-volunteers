@@ -1,0 +1,62 @@
+name: Auto Response to Applications
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  auto-respond:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'volunteer-application')
+    steps:
+      - name: Auto-respond and label application
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || "";
+            
+            // Extract age and parent email from the issue body template
+            const ageMatch = body.match(/### Your Age\s*\n\s*(\d+)/i);
+            const parentEmailMatch = body.match(/### Parent\/Guardian Email \(if under 18\)\s*\n\s*([^\n\r]+)/i);
+            
+            let isUnder18 = false;
+            let age = null;
+            
+            if (ageMatch) {
+              age = parseInt(ageMatch[1], 10);
+              if (age < 18) {
+                isUnder18 = true;
+              }
+            }
+            
+            const labelsToAdd = ['needs-review'];
+            let commentText = "";
+            
+            if (isUnder18) {
+              labelsToAdd.push('under-18');
+              commentText = `Hi @${issue.user.login},\n\nThank you for applying to volunteer with JimmyTheHat Games!\n\n⚠️ **Parental Consent Required:** Since you are under 18, we require a signed parental consent form before you can begin. We have flagged this on your application.\n\n**Next Steps:**\n1. Ask your parent/guardian to review the [parental-consent.md](https://github.com/subtiliorars-sys/jimmythehat-volunteers/blob/main/docs/legal/parental-consent.md) file in this repository.\n2. We will reach out to the parent email you provided to collect signatures.\n3. Once consent is verified, we'll proceed with your application review.\n\nThank you!`;
+            } else {
+              labelsToAdd.push('18-plus');
+              commentText = `Hi @${issue.user.login},\n\nThank you for applying to volunteer with JimmyTheHat Games!\n\n**Next Steps:**\n1. Our team (Mark/Daniel) will review your portfolio and application details within 48 hours.\n2. We will follow up here or via email if we need more information or want to schedule a quick intro chat.\n3. In the meantime, feel free to check out our [getting-started.md](https://github.com/subtiliorars-sys/jimmythehat-volunteers/blob/main/docs/onboarding/getting-started.md) guide.\n\nThanks!`;
+            }
+            
+            // Add labels
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: labelsToAdd
+            });
+            
+            // Post comment
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: commentText
+            });
