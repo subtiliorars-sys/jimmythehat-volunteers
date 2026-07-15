@@ -21,6 +21,21 @@ A peanut food-truck racing game built with TypeScript.
 
 ---
 
+## How to Contribute
+
+New volunteer? Follow the **[Contribution Workflow](docs/CONTRIBUTION_WORKFLOW.md)** —
+it walks you from application to your first merged pull request.
+
+Ready to pick a task? See the **[Good First Issues](docs/GOOD_FIRST_ISSUES.md)** list,
+and the **[sync checklist](docs/SYNC_GOOD_FIRST_ISSUES.md)** that keeps it in step with
+the game repo.
+
+**Maintainers / recruiters:** the **[Recruitment Kit](docs/recruitment/RECRUITMENT_KIT.md)**
+has ready-to-post subreddit drafts, Discord setup, the intro email, and a volunteer
+tracking board.
+
+---
+
 ## Open Roles
 
 ### Junior Game Developer (TypeScript)

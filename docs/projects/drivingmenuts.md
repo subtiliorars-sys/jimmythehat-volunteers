@@ -79,15 +79,25 @@ See the [Game Designer role description](../roles/game-designer.md) for details 
 
 ## Repository
 
-**Main Repository:** [DrivingMeNuts](https://github.com/subtiliorars-sys/DrivingMeNuts)
+**Main Repository (HQ, private):** [DrivingMeNuts](https://github.com/subtiliorars-sys/DrivingMeNuts)
+— design docs, plans, and (later) code.
+
+**Public, contribution-ready repo:** [DrivingMeNuts---Preview](https://github.com/subtiliorars-sys/DrivingMeNuts---Preview)
+— this is where volunteers clone, branch, and open pull requests.
+
+> **Volunteers:** always work against `DrivingMeNuts---Preview`, not the HQ repo,
+> unless a mentor explicitly says otherwise.
 
 **Getting Started:**
 ```bash
-git clone https://github.com/subtiliorars-sys/DrivingMeNuts.git
-cd DrivingMeNuts
+git clone https://github.com/subtiliorars-sys/DrivingMeNuts---Preview.git
+cd DrivingMeNuts---Preview
 npm install
 npm start
 ```
+
+**Contribution path:** see [`../CONTRIBUTION_WORKFLOW.md`](../CONTRIBUTION_WORKFLOW.md)
+(application → first PR) and the [`../GOOD_FIRST_ISSUES.md`](../GOOD_FIRST_ISSUES.md) list.
 
 ---
 

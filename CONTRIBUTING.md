@@ -23,6 +23,11 @@
    - Set up your development environment
    - Join our communication channels
 
+> **Full step-by-step path (application → first merged PR):** see
+> [docs/CONTRIBUTION_WORKFLOW.md](docs/CONTRIBUTION_WORKFLOW.md). Pick your first task
+> from [docs/GOOD_FIRST_ISSUES.md](docs/GOOD_FIRST_ISSUES.md).
+
+
 ---
 
 ## How to Contribute
