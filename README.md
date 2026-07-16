@@ -26,6 +26,9 @@ A peanut food-truck racing game built with TypeScript.
 New volunteer? Follow the **[Contribution Workflow](docs/CONTRIBUTION_WORKFLOW.md)** —
 it walks you from application to your first merged pull request.
 
+Working your **first PR right now?** Use the tickable **[First-PR Walkthrough](docs/FIRST_PR_WALKTHROUGH.md)**
+and run `.\scripts\first-pr-check.ps1` to verify your Preview clone.
+
 Ready to pick a task? See the **[Good First Issues](docs/GOOD_FIRST_ISSUES.md)** list,
 and the **[sync checklist](docs/SYNC_GOOD_FIRST_ISSUES.md)** that keeps it in step with
 the game repo.
