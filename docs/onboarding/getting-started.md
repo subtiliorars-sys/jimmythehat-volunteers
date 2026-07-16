@@ -72,8 +72,9 @@ You'll be assigned a small task based on your role:
 
 **1. Clone the Repository**
 ```bash
-git clone https://github.com/subtiliorars-sys/DrivingMeNuts.git
-cd DrivingMeNuts
+# Public contribution target (Preview). HQ DrivingMeNuts is private design docs.
+git clone https://github.com/subtiliorars-sys/DrivingMeNuts---Preview.git
+cd DrivingMeNuts---Preview
 ```
 
 **2. Install Dependencies**
