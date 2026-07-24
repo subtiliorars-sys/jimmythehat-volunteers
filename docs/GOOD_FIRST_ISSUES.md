@@ -1,33 +1,38 @@
-# Good First Issues — DrivingMeNuts
+# Good First Issues — Live Tasks You Can Claim Today
 
-**What this is:** A curated, role-sorted list of starter tasks volunteers can claim.
-**Why it lives here:** The `DrivingMeNuts` HQ repo currently has **0 open issues**. Until
-maintainers open these as live issues in `DrivingMeNuts---Preview`, this doc is the
-single source of truth for "what can I pick up?"
-
-**How to use it:**
-1. Find a task for your role.
-2. If the linked issue exists, comment `I'd like to claim this.`
-3. If it does **not** exist yet, see [`SYNC_GOOD_FIRST_ISSUES.md`](SYNC_GOOD_FIRST_ISSUES.md) — ping a mentor and we'll open it.
+**What this is:** Real, scoped starter tasks across JimmyTheHat game repos.
+**Status:** 3 live issues as of 2026-07-23.
 
 ---
 
-## For Junior Developers (TypeScript)
+## 🟢 LIVE — Claim these now
 
-| Task | Skill | Suggested label | Status |
-|------|-------|-----------------|--------|
-| Add a new power-up type (data + effect) | TS basics, data structures | `good first issue`, `enhancement` | Spec — open when ready |
-| Fix a collision-detection edge case | TS, math | `good first issue`, `bug` | Spec — open when ready |
-| Add a settings toggle (sound on/off) | TS, UI state | `good first issue`, `enhancement` | Spec — open when ready |
-| Write a unit test for an existing helper | TS, vitest | `good first issue`, `tests` | Spec — open when ready |
-| Improve an error message + add a guard | TS, defensive coding | `good first issue` | Spec — open when ready |
+| Repo | Issue | Task | Skill |
+|------|-------|------|-------|
+| **Clean-Sheet** | [#76](https://github.com/subtiliorars-sys/Clean-Sheet/issues/76) | Add dive-trail particle effect | TS, Phaser 3 particles |
+| **Bocce** | [#7](https://github.com/subtiliorars-sys/Bocce/issues/7) | Add score display during gameplay | TS, Phaser text |
+| **Bocce** | [#8](https://github.com/subtiliorars-sys/Bocce/issues/8) | Add ball shadow for depth | TS, Phaser graphics |
 
-## For Artists (2D/3D)
+**How to claim:** Click the issue link → comment "I'd like to work on this" → fork → code → PR.
 
-| Task | Skill | Suggested label | Status |
-|------|-------|-----------------|--------|
-| Create a placeholder food-truck sprite variant | 2D pixel art | `good first issue`, `art` | Spec — open when ready |
-| Design a track-banner UI element | UI art | `good first issue`, `art` | Spec — open when ready |
+---
+
+## For Junior Developers (TypeScript) — Coming soon
+
+| Task | Skill | Status |
+|------|-------|--------|
+| Add a new power-up type (data + effect) | TS basics, data structures | When DrivingMeNuts issues open |
+| Fix a collision-detection edge case | TS, math | When DrivingMeNuts issues open |
+| Add a settings toggle (sound on/off) | TS, UI state | When DrivingMeNuts issues open |
+| Write a unit test for an existing helper | TS, vitest | When DrivingMeNuts issues open |
+| Improve an error message + add a guard | TS, defensive coding | When DrivingMeNuts issues open |
+
+## For Artists (2D/3D) — Coming soon
+
+| Task | Skill | Status |
+|------|-------|--------|
+| Create a placeholder food-truck sprite variant | 2D pixel art | Spec — open when ready |
+| Design a track-banner UI element | UI art | Spec — open when ready |
 | Optimize an existing asset for web | Asset pipeline | `good first issue`, `art` | Spec — open when ready |
 
 ## For Designers
