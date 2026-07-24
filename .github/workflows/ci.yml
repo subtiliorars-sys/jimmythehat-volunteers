@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check HTML and markdown structure
+        run: |
+          html_count=$(find . -name "*.html" -not -path "./.git/*" | wc -l)
+          md_count=$(find . -name "*.md" -not -path "./.git/*" | wc -l)
+          echo "Found $html_count HTML files, $md_count markdown files"
+          # Check for broken relative links in markdown
+          errors=0
+          for f in $(find . -name "*.md" -not -path "./.git/*"); do
+            dir=$(dirname "$f")
+            for link in $(grep -oP '\[.*?\]\(([^)]*)\)' "$f" | grep -oP '\(\K[^)]*' | grep -v '^https\?://' | grep -v '^#' | grep -v '^mailto:'); do
+              # Remove anchor fragments
+              clean_link=$(echo "$link" | sed 's/#.*//')
+              target="$dir/$clean_link"
+              if [ ! -f "$target" ] && [ ! -d "$target" ]; then
+                echo "BROKEN: $f -> $link (resolved: $target)"
+                errors=$((errors+1))
+              fi
+            done
+          done
+          if [ $errors -gt 0 ]; then
+            echo "Found $errors broken link(s)"
+            exit 1
+          fi
+          echo "All markdown links valid"
