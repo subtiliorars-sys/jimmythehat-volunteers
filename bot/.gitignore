@@ -1,0 +1,5 @@
+# Never commit these — secrets and deps
+node_modules/
+.env
+.env.local
+*.log
